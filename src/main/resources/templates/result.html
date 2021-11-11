@@ -192,11 +192,11 @@
                                                         <br>
                                                     </address>
 
-                                                    <strong th:if="${userProfile.facilitytype == 'private'}">Administative Charge - ₦[[${userProfile.cost}]]</strong>
+                                                    <strong th:if="${userProfile.facilitytype == 'private'}">Administative Charge - ₦ [[${userProfile.cost}]]</strong>
                                                     <br/>
 
 
-                                                    <a th:href="${userProfile.paymentref}" th:if="${userProfile.getStateresidence() == 'Lagos State' && userProfile.getPaid()=='unpaid'}"  target="_blank"  class="ml-2">Click here to make payment</a>
+                                                    <a th:href="${userProfile.paymentref}" th:if="${userProfile.getStateresidence() == 'Lagos State' && userProfile.getPaid()=='unpaid' && userProfile.getFacilitytype()=='private'}"  target="_blank"  class="ml-2">Click here to make payment</a>
 
                                                 </div>
                                             </div>

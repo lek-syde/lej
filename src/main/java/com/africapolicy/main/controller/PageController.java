@@ -316,6 +316,7 @@ public class PageController {
 
 
 
+
             if(user.getDosetype().equalsIgnoreCase("first")){
                 userProfile.setCost(hc.getFulldose());
                 packae="Standard";
@@ -343,7 +344,7 @@ public class PageController {
 
 
 
-            if(user.getStateresidence().equalsIgnoreCase("Lagos State")){
+            if(user.getStateresidence().equalsIgnoreCase("Lagos State") && user.getFacilitytype().equalsIgnoreCase("private")){
                 LagosPaymentResponse re= updatePayment(userProfile,packae, hc.getOrganizationuit());
 
                 System.out.println("Initialising");
